@@ -7,6 +7,7 @@ const client = new Discord.Client({
 });
 
 const BOT_PREFIX = '!', MOD_ME_COMMAND = 'mod-me';
+const url = 'https://codecau.se/yt';
 
 function modUser(member){
     member.roles.add('784299354982580244'); 
@@ -19,11 +20,16 @@ client.on('ready', () => {
 client.on('message', (msg)=> {
     if (msg.content === 'ping') {
         // msg.reply('PONG!');
-        msg.channel.send("Welcome to OS Hub!")
+        msg.channel.send("Welcome to OS Hub!");
     }
 
     if (msg.content == 'i love os'){
         msg.react("❤️");
+    }
+
+    if (msg.content == 'help'){
+        msg.react("💁🏻");
+        msg.channel.send(`For Getting Started with $OPEN SOURCE$ visit ${url}`);
     }
 
     if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
