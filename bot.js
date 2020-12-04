@@ -27,7 +27,7 @@ client.on('message', (msg)=> {
         msg.react("❤️");
     }
 
-    if (msg.content == 'help'){
+    if (msg.content === 'help'){
         msg.react("💁🏻");
         msg.channel.send(`For Getting Started with $OPEN SOURCE$ visit ${url}`);
     }
